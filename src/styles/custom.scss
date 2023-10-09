@@ -1,5 +1,25 @@
-// $primary: green;
-// $danger: blue;
-$body: red;
+@import './partials/header.scss';
+@import './partials/cards.scss';
+@import './partials/variables.scss';
+
+.contact-info {
+    display: flex;
+    align-items: center ;
+
+    p {
+        margin: 0 0 0 5px;
+    }
+}
+
+// Self portrait
+.img-container {
+    max-width: 200px;
+    
+    img {
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+}
+
 
 @import 'node_modules/bootstrap/scss/bootstrap';
