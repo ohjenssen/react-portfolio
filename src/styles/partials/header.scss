@@ -2,7 +2,128 @@
     max-width: 80px;
 }
 
-$navbar-light-icon-color: black;
-$navbar-light-toggler-border-color: none;
+// $navbar-light-icon-color: black;
+// $navbar-light-toggler-border-color: none;
 
-$navbar-toggler-focus-width:    0;
+// $navbar-toggler-focus-width:    0;
+$black: #121317;
+$neon-blue: #4A738C;
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: $black;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
+.desktop-nav {
+    margin-left: auto;
+    margin-right: 16px;
+    font-family: "Abhaya Libre";
+    display: flex;
+}
+
+.desktop-nav a{
+    text-decoration: none;
+    margin: 0px 15px 0px 15px;
+    font-family: Roboto;
+    color: $black;
+    font-weight: bold;
+}
+
+.desktop-nav a:hover{
+    text-decoration: underline;
+}
+
+.hamburger {
+    position: relative;
+    display: block;
+    width: 35px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    margin-left: auto;
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: $neon-blue;
+    margin: 6px 0px;
+    transition: 0.4s;
+    border-radius: 2px 2px 2px 2px;
+}
+
+.hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+
+.hamburger.is-active:after {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    z-index: 98;
+    background-color: $black;
+    padding-top: 120px;
+    transition: 0.4s;
+    font-family: 'Roboto', sans-serif; 
+}
+
+.mobile-nav.is-active {
+    left: 0;
+}
+
+.mobile-nav a {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 16px;
+    text-align: center;
+    padding: 12px 16px;
+    background-color: $neon-blue;
+    border-radius: 10px;
+    color: $black;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+    
+}
+
+.mobile-nav a:hover{
+    background-color: $neon-blue;
+}
+
+@media (max-width: 768px){
+    .desktop-nav {
+        display: none;
+    }
+}
+
+@media (min-width: 768px){
+    .mobile-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
