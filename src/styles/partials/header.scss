@@ -1,5 +1,6 @@
 .logo {
     max-width: 80px;
+    margin: 16px;
 }
 
 // $navbar-light-icon-color: black;
@@ -48,7 +49,8 @@ $neon-blue: #4A738C;
     background: none;
     outline: none;
     border: none;
-    margin-left: auto;
+    // margin-left: auto;
+    margin: 0px 16px 0px auto;
 }
 
 .hamburger .bar, .hamburger:after, .hamburger:before {

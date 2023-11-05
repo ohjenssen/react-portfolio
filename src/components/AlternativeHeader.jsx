@@ -1,4 +1,5 @@
 import logo from '../assets/Portfolio_logo.png';
+import { Link } from 'react-router-dom';
 
 export default function AlternativeHeader(){
     window.onload = function(){
@@ -17,11 +18,11 @@ export default function AlternativeHeader(){
                 <div className="nav-container">
                     <img alt='logo' src={logo} className='logo'/>
                     <nav className="desktop-nav">
-                        <a className="nav-link" href="index.html">Hjem</a>
-                        <a className="nav-link" href="voresprojekter.html">Vores Projekter</a>
-                        <a className="nav-link" href="bliveinspireret.html">Bliv Inspireret</a>
-                        <a className="nav-link" href="omos.html">Om Os</a>
-                        <a className="nav-link" href="kontakt.html">Kontakt</a>
+                        <Link className="nav-link" href="index.html">Hjem</Link>
+                        <Link className="nav-link" href="voresprojekter.html">Vores Projekter</Link>
+                        <Link className="nav-link" href="bliveinspireret.html">Bliv Inspireret</Link>
+                        <Link className="nav-link" href="omos.html">Om Os</Link>
+                        <Link className="nav-link" href="kontakt.html">Kontakt</Link>
                     </nav>
                     <button className="hamburger">
                         <div className="bar"></div>
@@ -29,11 +30,11 @@ export default function AlternativeHeader(){
                 </div>
             </header>
             <nav className="mobile-nav">
-                <a href="index.html">Hjem</a>
-                <a href="voresprojekter.html">Vores Projekter</a>
-                <a href="bliveinspireret.html">Bliv Inspireret</a>
-                <a href="omos.html">Om Os</a>
-                <a href="kontakt.html">Kontakt</a>
+                <Link href="index.html">Hjem</Link>
+                <Link href="voresprojekter.html">Vores Projekter</Link>
+                <Link href="bliveinspireret.html">Bliv Inspireret</Link>
+                <Link href="omos.html">Om Os</Link>
+                <Link href="kontakt.html">Kontakt</Link>
             </nav>
         </>
     )
